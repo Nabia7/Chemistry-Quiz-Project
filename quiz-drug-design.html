@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Chemistry Quiz</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="bg-light">
+
+    <div class="container-fluid d-flex justify-content-center align-items-center min-vh-100 px-3">
+        <div class="card shadow p-4">
+
+            <!-- Header -->
+            <div class="mb-3 text-center">
+                <h4 id="topicTitle">Drug Design & Synthesis</h4>
+            </div>
+
+            <!-- Progress -->
+            <p id="progress" class="text-muted"></p>
+
+            <!-- Question -->
+            <h5 id="question" class="mt-3"></h5>
+
+            <!-- Options -->
+            <div id="options" class="mt-3"></div>
+
+            <!-- Explanation / Feedback -->
+            <div id="feedback" class="mt-3"></div>
+
+            <!-- Next Button -->
+            <div class="text-end">
+                <button id="nextBtn" class="btn btn-primary mt-3" disabled>
+                    Next
+                </button>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        // questions set
+            const questions = [
+                    {
+                        question: "What is the primary goal of drug design?",
+                        options: [
+                            "To increase chemical reactions",
+                            "To create molecules that selectively interact with biological targets",
+                            "To reduce laboratory costs",
+                            "To make drugs colorful"
+                        ],
+                        answer: 1,
+                        explanation:
+                            "Drug design focuses on creating molecules that selectively bind to biological targets like enzymes or receptors, improving effectiveness and reducing side effects."
+                    },
+                    {
+                        question: "Which of the following is usually the biological target in rational drug design?",
+                        options: [
+                            "Lipids",
+                            "Carbohydrates",
+                            "Proteins (enzymes or receptors)",
+                            "Vitamins"
+                        ],
+                        answer: 2,
+                        explanation:
+                            "Most drugs act on proteins such as enzymes or receptors because these regulate key physiological processes in the body."
+                    },
+                    {
+                        question: "Structure-Activity Relationship (SAR) studies help to:",
+                        options: [
+                            "Determine drug color",
+                            "Understand how chemical structure affects biological activity",
+                            "Increase drug price",
+                            "Stabilize laboratory equipment"
+                        ],
+                        answer: 1,
+                        explanation:
+                            "SAR studies examine how modifications in chemical structure influence biological activity, helping optimize potency and reduce toxicity."
+                    },
+                    {
+                        question: "A lead compound in drug development refers to:",
+                        options: [
+                            "A toxic compound",
+                            "A compound used in metal industries",
+                            "A starting molecule with desired biological activity",
+                            "A finished marketed drug"
+                        ],
+                        answer: 2,
+                        explanation:
+                            "A lead compound is an initial molecule that shows promising activity and is further optimized to improve its therapeutic properties."
+                    },
+                    {
+                        question: "Which process modifies a lead compound to improve potency and reduce side effects?",
+                        options: [
+                            "Optimization",
+                            "Fermentation",
+                            "Distillation",
+                            "Crystallization"
+                        ],
+                        answer: 0,
+                        explanation:
+                            "Optimization involves structural modification of the lead compound to enhance efficacy, selectivity, and pharmacokinetic properties."
+                    },
+                    {
+                        question: "Bioisosteres are used in drug design to:",
+                        options: [
+                            "Increase toxicity",
+                            "Reduce molecular weight randomly",
+                            "Change drug color",
+                            "Replace functional groups with similar properties to improve activity"
+                        ],
+                        answer: 3,
+                        explanation:
+                            "Bioisosteres are chemically similar groups that replace parts of a molecule to enhance activity or reduce toxicity without losing function."
+                    },
+                    {
+                        question: "Which technique helps in designing drugs using computer modeling?",
+                        options: [
+                            "Titration",
+                            "Molecular docking",
+                            "Filtration",
+                            "Chromatography"
+                        ],
+                        answer: 1,
+                        explanation:
+                            "Molecular docking predicts how a drug molecule fits into its target protein, helping estimate binding affinity and orientation."
+                    },
+                    {
+                        question: "During drug synthesis, protecting groups are used to:",
+                        options: [
+                            "Prevent unwanted reactions at specific functional groups",
+                            "Increase taste",
+                            "Enhance color",
+                            "Speed up digestion"
+                        ],
+                        answer: 0,
+                        explanation:
+                            "Protecting groups temporarily block reactive functional groups during multi-step synthesis to avoid unwanted side reactions."
+                    },
+                    {
+                        question: "Pharmacophore refers to:",
+                        options: [
+                            "Inactive part of a drug",
+                            "The toxic component of a drug",
+                            "Essential structural features responsible for biological activity",
+                            "The packaging of a drug"
+                        ],
+                        answer: 2,
+                        explanation:
+                            "A pharmacophore represents the essential structural features necessary for a drug to interact with its biological target."
+                    },
+                    {
+                        question: "Combinatorial chemistry is important because it:",
+                        options: [
+                            "Produces one compound at a time",
+                            "Generates a large number of compounds for screening",
+                            "Reduces laboratory safety",
+                            "Eliminates clinical trials"
+                        ],
+                        answer: 1,
+                        explanation:
+                            "Combinatorial chemistry rapidly generates multiple related compounds that can be screened to identify potential drug candidates."
+                    }
+                ];
+    </script>
+
+    <!-- quiz logic  -->
+    <script src="js/quiz.js"></script>
+</body>
+
+</html>
